@@ -23,7 +23,7 @@ export default function Landing() {
           className="hero-image"
         />
 
-        <ButtonsContainer>
+        <ButtonsContainer className="buttons-container">
           <Link to="/study" className="study">
             <img src={studyIcon} alt="Estudar"/>
             Estudar
