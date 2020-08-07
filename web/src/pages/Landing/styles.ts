@@ -30,13 +30,14 @@ export const Container = styled.div`
       grid-template-rows: 350px 1fr;
       grid-template-columns: 2fr 1fr 1fr;
       grid-template-areas:
-        "logo hero hero"
-        "buttons buttons total"
+        'logo hero hero'
+        'buttons buttons total';
     }
     .logo-container {
       grid-area: logo;
       text-align: left;
       align-self: center;
+      justify-self: start;
       margin: 0;
     }
     .logo-container img {
@@ -114,7 +115,7 @@ export const ButtonsContainer = styled.div`
   a img {
     margin-right: 2.4rem;
   }
-  
+
   a.study {
     background: var(--color-primary-lighter);
   }
