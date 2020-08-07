@@ -7,7 +7,7 @@ import { PageTeacherList } from './styles';
 const TeacherList: React.FC = () => {
   return (
     <PageTeacherList id="page-teacher-list">
-      <PageHeader />
+      <PageHeader title="Estes são os proffys disponíveis." />
     </PageTeacherList>
   );
 };
