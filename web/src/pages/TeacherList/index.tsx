@@ -10,6 +10,6 @@ const TeacherList: React.FC = () => {
       <PageHeader />
     </PageTeacherList>
   );
-}
+};
 
 export default TeacherList;
