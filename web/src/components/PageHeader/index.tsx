@@ -10,9 +10,9 @@ interface PageHeaderProps {
   title: string;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
+const PageHeader: React.FC<PageHeaderProps> = ({ title, children }) => {
   return (
-    <Header className="page-header">
+    <Header>
       <div className="top-bar-container">
         <Link to="/">
           <img src={backIcon} alt="Voltar" />
@@ -22,6 +22,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
 
       <div className="header-content">
         <strong>{title}</strong>
+        {children}
       </div>
     </Header>
   );

@@ -6,7 +6,8 @@ import { PageTeacherForm } from './styles';
 
 const TeacherForm: React.FC = () => {
   return (
-    <PageTeacherForm>
+    // <PageTeacherForm id="page-teacher-form" className="container">
+    <PageTeacherForm id="page-teacher-form">
       <PageHeader title="Que incrível que você quer dar aulas." />
     </PageTeacherForm>
   );
