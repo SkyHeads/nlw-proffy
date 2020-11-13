@@ -1,9 +1,9 @@
 import React from 'react';
 
-function App() {
-  return (
-    <h1>Hello Proffy!</h1>
-  );
-}
+// import { Container } from './styles';
+
+const App: React.FC = () => {
+  return <div />;
+};
 
 export default App;
