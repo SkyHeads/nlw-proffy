@@ -4,31 +4,36 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
-const TeacherItem: React.FC = () => {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   return (
     <article className="teacher-item">
       <header>
-        <img
-          src="https://avatars3.githubusercontent.com/u/43793592?s=460&u=977cc37f6e87bcc029d8efc6d89ca7e5a5d55de9&v=4"
-          alt="Avatar"
-        />
+        <img src={teacher.avatar} alt="Avatar" />
         <div>
-          <strong>Bruno Fernandes</strong>
-          <span>Química</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
-      <p>
-        Aulas de Matemática bem estruturadas e expositiva.
-        <br /> <br />
-        Estude para o ENEM e Vestibulares no Melhor Cursinho com o Melhor Preço.
-        Pague em até 12x. ENEM com a melhor preparação. Parcelas por menos de R$
-        15 reais.
-      </p>
+      <p>{teacher.bio}</p>
 
       <footer>
         <p>
           Preço/hora
-          <strong>R$ 15,00</strong>
+          <strong>R$ {teacher.cost}</strong>
         </p>
         <button type="button">
           <img src={whatsappIcon} alt="whatsapp" />
