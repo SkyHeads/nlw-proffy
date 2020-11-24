@@ -28,9 +28,10 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-    "camelcase": "off",
-    "react/prop-types": "off",
     "no-use-before-define": "off",
+    "camelcase": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/prop-types": "off",
     "react/style-prop-object": "off",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
