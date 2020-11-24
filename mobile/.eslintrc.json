@@ -29,6 +29,7 @@
   "rules": {
     "prettier/prettier": "error",
     "camelcase": "off",
+    "react/prop-types": "off",
     "no-use-before-define": "off",
     "react/style-prop-object": "off",
     "react/jsx-one-expression-per-line": "off",
