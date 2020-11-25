@@ -29,6 +29,7 @@
   "rules": {
     "prettier/prettier": "error",
     "no-use-before-define": "off",
+    "react/jsx-wrap-multilines": "off",
     "camelcase": "off",
     "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",

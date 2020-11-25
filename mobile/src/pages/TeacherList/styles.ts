@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
 
   searchForm: {
-    marginBottom: 24,
+    marginBottom: 8,
   },
 
   label: {
