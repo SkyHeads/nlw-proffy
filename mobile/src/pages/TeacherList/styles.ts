@@ -6,6 +6,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#f0f0f7',
   },
 
+  flexGrow: {
+    flexGrow: 1,
+  },
+
   teacherList: {
     marginTop: -40,
   },

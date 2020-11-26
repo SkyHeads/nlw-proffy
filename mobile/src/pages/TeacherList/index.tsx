@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { View, ScrollView, Text, TextInput } from 'react-native';
+import {
+  View,
+  ScrollView,
+  Text,
+  TextInput,
+  KeyboardAvoidingView,
+} from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import PageHeader from '../../components/PageHeader';
@@ -15,6 +21,8 @@ const TeacherList: React.FC = () => {
   const [subject, setSubject] = useState('');
   const [week_day, setWeekDay] = useState('');
   const [time, setTime] = useState('');
+
+  const [enabledShift, setEnabledShift] = useState(false);
 
   function handleToggleFilterVisible() {
     setIsFilterVisible(!isFilterVisible);
@@ -44,10 +52,15 @@ const TeacherList: React.FC = () => {
         }
       >
         {isFilterVisible && (
-          <View style={styles.searchForm}>
+          <KeyboardAvoidingView
+            style={styles.searchForm}
+            behavior="position"
+            enabled={enabledShift}
+          >
             <Text style={styles.label}>Matéria</Text>
             <TextInput
               style={styles.input}
+              onFocus={() => setEnabledShift(true)}
               placeholder="Qual a matéria?"
               placeholderTextColor="#c1bccc"
               value={subject}
@@ -59,6 +72,7 @@ const TeacherList: React.FC = () => {
                 <Text style={styles.label}>Dia da semana</Text>
                 <TextInput
                   style={styles.input}
+                  onFocus={() => setEnabledShift(true)}
                   placeholder="Qual o dia?"
                   placeholderTextColor="#c1bccc"
                   value={week_day}
@@ -70,6 +84,7 @@ const TeacherList: React.FC = () => {
                 <Text style={styles.label}>Horário</Text>
                 <TextInput
                   style={styles.input}
+                  onFocus={() => setEnabledShift(true)}
                   placeholder="Qual horário?"
                   placeholderTextColor="#c1bccc"
                   value={time}
@@ -84,10 +99,9 @@ const TeacherList: React.FC = () => {
             >
               <Text style={styles.submitButtonText}>Filtrar</Text>
             </RectButton>
-          </View>
+          </KeyboardAvoidingView>
         )}
       </PageHeader>
-
       <ScrollView
         style={styles.teacherList}
         contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24 }}
