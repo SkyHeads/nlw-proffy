@@ -25,7 +25,7 @@ Proffy is an online study platform that helps people find teachers online.
 
 You can view the layout of the project through [this link](https://www.figma.com/file/GHGS126t7WYjnPZdRKChJF/Proffy-Web).
 
-## :memo: Licença
+## :memo: License
 
 This project is under the MIT license.
 
